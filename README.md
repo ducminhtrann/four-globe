@@ -1,6 +1,13 @@
 # Project Setup & Usage Guide
 
 ## 📦 Install Dependencies
+Create .env file
+
+```bash
+cp .env.example .env
+```
+
+Install deps
 
 ```bash
 npm i
