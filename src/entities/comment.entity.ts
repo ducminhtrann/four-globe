@@ -26,17 +26,17 @@ export class Comment {
     })
     public updated_at: Date;
 
-    @Column({type: 'text'})
+    @Column({ type: 'text' })
     content: string
 
     @ManyToOne(() => User)
     user: User
 
-    @ManyToOne(() => Post)
+    @ManyToOne(() => Post, (post => post.comments), { onDelete: 'CASCADE' })
     post: Post
 
     constructor(data?: Partial<Comment>) {
-        if(data) {
+        if (data) {
             this.content = data?.content as string;
             this.user = data?.user as User;
             this.post = data?.post as Post;

@@ -3,6 +3,8 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { AuthModule } from './domains/auth';
+import { PostModule } from './domains/posts';
 
 console.log("__dirName", __dirname)
 
@@ -22,6 +24,8 @@ console.log("__dirName", __dirname)
       entities: [__dirname + '/**/*.entity{.ts,.js}'],
       synchronize: true,
     }),
+    AuthModule,
+    PostModule
   ],
   controllers: [AppController],
   providers: [AppService],

@@ -33,6 +33,7 @@ export class User {
     constructor(data?: Partial<User>
     ) {
         if(data) {
+            this.id = data?.id as number;
             this.username = data?.username as string;
             this.password = data?.password as string
         }
