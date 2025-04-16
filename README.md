@@ -51,5 +51,9 @@ See `erd.png` in the project root.
    - Copy the `access_token` from the login response.  
    - Click **Authorize** in Swagger and paste it.
 
-4. **Create Post**  
+4. **Create Post (Authentication Required)**  
    ➜ [Click Try it out](http://localhost:3001/api-docs#/Posts/PostController_createProduct)
+4. **Get List Posts**  
+   ➜ [Click Try it out](http://localhost:3001/api-docs#/Posts/PostController_getProducts)
+
+5. **Similar for other endpoints**
